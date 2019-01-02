@@ -5,6 +5,7 @@
 <head>
 <meta charset="EUC-KR">
 <title>Insert title here</title>
+<script src="members.js"></script>
 </head>
 <body>
 	<form action="joinOk.jsp" method="post" name="reg_frm">
