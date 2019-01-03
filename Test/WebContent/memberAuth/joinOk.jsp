@@ -1,5 +1,5 @@
-<%@page import="com.javalec.member.MemberDAO"%>
 <%@ page import="java.sql.Timestamp" %>
+<%@ page import="com.javalec.member.*"%>
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
     pageEncoding="EUC-KR"%>
 <% request.setCharacterEncoding("EUC-KR"); %>

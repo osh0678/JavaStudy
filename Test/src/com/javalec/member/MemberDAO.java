@@ -35,10 +35,10 @@ public class MemberDAO {
 		Connection con			= null;
 		PreparedStatement pstmt	= null;
 		String sql				= "insert into members values (?,?,?,?,?,?)";
-		
 		try {
 			con = getConnection();
 			pstmt = con.prepareStatement(sql);
+			System.out.println(pstmt);
 			pstmt.setString(1, dto.getId());
 			pstmt.setString(2, dto.getPw());
 			pstmt.setString(3, dto.getName());
@@ -116,7 +116,7 @@ public class MemberDAO {
 			rs = pstmt.executeQuery();
 			
 			if(rs.next()) {
-				dbPw = rs.getString("pw");
+				dbPw = rs.getString("PW");
 				if(dbPw.equals(pw)) {
 					ri = MemberDAO.MEMBER_LOGIN_SUCCESS;
 				}else {
@@ -146,22 +146,23 @@ public class MemberDAO {
 		Connection con			= null;
 		PreparedStatement pstmt	= null;
 		ResultSet rs			= null;
-		String sql				= "select pw from members where id = ?";
+		String sql				= "select * from members where id = ?";
 		MemberDTO dto			= null;
 		
 		try {
 			con	= getConnection();
 			pstmt = con.prepareStatement(sql);
+			pstmt.setString(1, id);
 			rs	= pstmt.executeQuery();
 			
 			if(rs.next()) {
 				dto = new MemberDTO();
-				dto.setId(rs.getString("id"));
-				dto.setPw(rs.getString("pw"));
-				dto.setName(rs.getString("name"));
-				dto.seteMail(rs.getString("mail"));
-				dto.setrDate(rs.getTimestamp("rDate"));
-				dto.setAddress(rs.getString("address"));
+				dto.setId(rs.getString("ID"));
+				dto.setPw(rs.getString("PW"));
+				dto.setName(rs.getString("NAME"));
+				dto.seteMail(rs.getString("MAIL"));
+				dto.setrDate(rs.getTimestamp("RDATE"));
+				dto.setAddress(rs.getString("ADDRESS"));
 			}
 		}catch (Exception e) {
 			e.printStackTrace();
@@ -182,7 +183,7 @@ public class MemberDAO {
 		int ri = 0;
 		Connection con			= null;
 		PreparedStatement pstmt	= null;
-		String sql				= "update members set pw =?, email = ?, address=? where id = ?";
+		String sql				= "update members set pw =?, mail = ?, address=? where id = ?";
 		
 		try {
 			con = getConnection();
