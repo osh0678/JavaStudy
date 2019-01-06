@@ -1,50 +1,52 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xmlns="http://java.sun.com/xml/ns/javaee"
-	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
-	id="WebApp_ID" version="3.0">
-	<display-name>Test</display-name>
-	<welcome-file-list>
-		<welcome-file>index.html</welcome-file>
-		<welcome-file>index.htm</welcome-file>
-		<welcome-file>index.jsp</welcome-file>
-		<welcome-file>default.html</welcome-file>
-		<welcome-file>default.htm</welcome-file>
-		<welcome-file>default.jsp</welcome-file>
-	</welcome-file-list>
-
-	<error-page>
-		<error-code>404</error-code>
-		<location>/error404.jsp</location>
-	</error-page>
-	
-	<error-page>
-		<error-code>500</error-code>
-		<location>/error500.jsp</location>
-	</error-page>
-
-
-	<servlet>
-		<servlet-name>HelloWorld</servlet-name>
-		<servlet-class>com.standard.ex.HelloWorld</servlet-class>
-	</servlet>
-	<servlet-mapping>
-		<servlet-name>HelloWorld</servlet-name>
-		<url-pattern>/HelloWorld</url-pattern>
-	</servlet-mapping>
-	<context-param>
-		<param-name>id</param-name>
-		<param-value>abcedf</param-value>
-	</context-param>
-	<context-param>
-		<param-name>pw</param-name>
-		<param-value>1234</param-value>
-	</context-param>
-	<context-param>
-		<param-name>path</param-name>
-		<param-value>C:\Spring\Test\file</param-value>
-	</context-param>
-	<!-- <listener> -->
-	<!-- <listener-class>com.standard.ex.ServletL</listener-class> -->
-	<!-- </listener> -->
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" id="WebApp_ID" version="3.0">
+  <display-name>Test</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+  <error-page>
+    <error-code>404</error-code>
+    <location>/error404.jsp</location>
+  </error-page>
+  <error-page>
+    <error-code>500</error-code>
+    <location>/error500.jsp</location>
+  </error-page>
+  <context-param>
+    <param-name>con_name</param-name>
+    <param-value>con_name은 홍길동 입니다.</param-value>
+  </context-param>
+  <context-param>
+    <param-name>con_id</param-name>
+    <param-value>con_id는 abcde 입니다.</param-value>
+  </context-param>
+  <context-param>
+    <param-name>con_pw</param-name>
+    <param-value>con_pw는 12345 입니다.</param-value>
+  </context-param>
+  <servlet>
+    <servlet-name>HelloWorld</servlet-name>
+    <servlet-class>com.standard.ex.HelloWorld</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>HelloWorld</servlet-name>
+    <url-pattern>/HelloWorld</url-pattern>
+  </servlet-mapping>
+  <context-param>
+    <param-name>id</param-name>
+    <param-value>abcedf</param-value>
+  </context-param>
+  <context-param>
+    <param-name>pw</param-name>
+    <param-value>1234</param-value>
+  </context-param>
+  <context-param>
+    <param-name>path</param-name>
+    <param-value>C:\Spring\Test\file</param-value>
+  </context-param>
 </web-app>

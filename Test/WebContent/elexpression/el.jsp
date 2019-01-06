@@ -7,9 +7,11 @@
 <title>Insert title here</title>
 </head>
 <body>
-<%
-	session.invalidate();
-	response.sendRedirect("login.html");
-%>
+
+	${10}<br/>
+	${99.99}<br/>
+	${"ABC"}<br/>
+	${true}<br/>
+	
 </body>
 </html>

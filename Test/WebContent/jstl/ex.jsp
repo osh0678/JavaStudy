@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
     pageEncoding="EUC-KR"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -7,10 +8,5 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<form action="request_snd.jsp">
-		당신의 나이는 : <input type="text" name="age" size="5">
-		<input type="submit" value="전송">
-	</form>
-
 </body>
 </html>

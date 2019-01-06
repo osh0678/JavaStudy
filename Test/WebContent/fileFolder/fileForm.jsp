@@ -7,9 +7,10 @@
 <title>Insert title here</title>
 </head>
 <body>
+	<form action="fileFormOk.jsp" method="post" enctype="multipart/form-data">
+		ÆÄÀÏ : <input type="file" name="file"><br />
+		<input type="submit" value="File Upload">
+	</form>
 
-	<h1>include 01</h1>
-	<jsp:include page="include02.jsp"></jsp:include>
-	<h1>include 01</h1>
 </body>
 </html>
