@@ -60,7 +60,7 @@ public class FrontCon extends HttpServlet {
 			Service service = new MembersAllService();
 			ArrayList<MemberDTO> dtos = service.execute(request, response);
 			System.out.println("service : " + service + " dtos : " +  dtos + " size :" + dtos.size());
-			
+
 			for(int i = 0; i < dtos.size() ; i++) {
 				System.out.println("for ¹®");
 				MemberDTO dto	= dtos.get(i);
