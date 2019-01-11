@@ -10,6 +10,7 @@ public class BReplyCommand implements BCommand {
 	@Override
 	public void execute(HttpServletRequest request, HttpServletResponse response) {
 		// TODO Auto-generated method stub
+		System.out.println("Reply Command");
 		
 		String bId = request.getParameter("bId");
 		String bName = request.getParameter("bName");

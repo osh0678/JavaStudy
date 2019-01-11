@@ -12,7 +12,7 @@ public class BDTO {
 	int bHit;
 	int bGroup;
 	int bStep;
-	int BIndent;
+	int bIndent;
 	
 	public BDTO() {
 		// TODO Auto-generated constructor stub
@@ -27,7 +27,7 @@ public class BDTO {
 		this.bHit		= bHit;
 		this.bGroup		= bGroup;
 		this.bStep		= bStep;
-		this.BIndent	= bIndent;
+		this.bIndent	= bIndent;
 	}
 
 	public int getbId() {
@@ -94,12 +94,14 @@ public class BDTO {
 		this.bStep = bStep;
 	}
 
-	public int getBIndent() {
-		return BIndent;
+	public int getbIndent() {
+		return bIndent;
 	}
 
-	public void setBIndent(int bIndent) {
-		BIndent = bIndent;
+	public void setbIndent(int bIndent) {
+		this.bIndent = bIndent;
 	}
+
+
 	
 }

@@ -12,13 +12,10 @@ public class BContentCommand implements BCommand {
 	@Override
 	public void execute(HttpServletRequest request, HttpServletResponse response) {
 		// TODO Auto-generated method stub
-		String bld	= request.getParameter("bld");
+		String bId	= request.getParameter("bId");
 		BDAO dao = new BDAO();
-		BDTO dto = new BDTO();
+		BDTO dto = dao.contentView(bId);
 		
 		request.setAttribute("content_view", dto);
-		
-
 	}
-
 }

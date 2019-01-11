@@ -39,7 +39,7 @@
 			</tr>
 			
 			<tr>
-				<td colspan="2"><input type="submit" value="답변"> <a href="list.do" >목록</a></td>
+				<td colspan="2"><input type="submit" value="답변">&nbsp;&nbsp; <a href="list.do" >목록</a></td>
 			</tr>
 		</form>
 	</table>

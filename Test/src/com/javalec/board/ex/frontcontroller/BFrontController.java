@@ -63,9 +63,10 @@ public class BFrontController extends HttpServlet {
 		String uri		= request.getRequestURI();
 		String conPath	= request.getContextPath();
 		String com		= uri.substring(conPath.length());
+		System.out.println(uri + "\t" + conPath + "\t" + com);
 		
 		if(com.equals("/write_view.do")) {
-			viewPage = "write_view.jsp";
+			viewPage = "board/write_view.jsp";
 		}else if (com.equals("/write.do")) {
 			command = new BWriteCommand();
 			command.execute(request, response);
@@ -73,11 +74,11 @@ public class BFrontController extends HttpServlet {
 		}else if (com.equals("/list.do")) {
 			command = new BListCommand();
 			command.execute(request, response);
-			viewPage = "list.jsp";
+			viewPage = "board/list.jsp";
 		}else if (com.equals("/content_view.do")) {
 			command = new BContentCommand();
 			command.execute(request, response);;
-			viewPage = "content_view.jsp";
+			viewPage = "board/content_view.jsp";
 		}else if (com.equals("/modify.do")) {
 			command = new BModifyCommand();
 			command.execute(request, response);
@@ -89,15 +90,17 @@ public class BFrontController extends HttpServlet {
 		}else if (com.equals("/reply_view.do")) {
 			command = new BReplyViewCommand();
 			command.execute(request, response);
-			viewPage = "reply_view.jsp";
-		}else if (com.equals("reply.do")) {
+			viewPage = "board/reply_view.jsp";
+		}else if (com.equals("/reply.do")) {
+			System.out.println("reply");
 			command = new BReplyCommand();
 			command.execute(request, response);
 			viewPage = "list.do";
 		}
-		
+
 		RequestDispatcher dispatcher = request.getRequestDispatcher(viewPage);
 		dispatcher.forward(request, response);
 
+		
 	}
 }

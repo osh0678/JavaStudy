@@ -57,7 +57,7 @@ public class BDAO {
 	}
 	
 	public ArrayList<BDTO> list(){
-		ArrayList<BDTO> dtos = new ArrayList<BDTO>();
+		ArrayList<BDTO> dtos 	= new ArrayList<BDTO>();
 		Connection con			= null;
 		PreparedStatement pstmt	= null;
 		ResultSet rs			= null;
@@ -201,7 +201,7 @@ public class BDAO {
 			pstmt = con.prepareStatement(sql);
 			pstmt.setInt(1, Integer.parseInt(bId));
 			int rn = pstmt.executeUpdate();
-			
+
 		} catch (Exception e) {
 			// TODO: handle exception
 			e.printStackTrace();
@@ -349,6 +349,7 @@ public class BDAO {
 			con = dataSource.getConnection();
 			String sql = "update mvc_board set bHit = bHit + 1 where bId = ?";
 			pstmt = con.prepareStatement(sql);
+			pstmt.setInt(1, Integer.parseInt(bId));
 			
 			int rn = pstmt.executeUpdate();
 			

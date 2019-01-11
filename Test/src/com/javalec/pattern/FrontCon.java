@@ -14,7 +14,7 @@ import javax.servlet.http.HttpServletResponse;
 /**
  * Servlet implementation class FrontCon
  */
-@WebServlet("*.do")
+@WebServlet("*.dos")
 public class FrontCon extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
