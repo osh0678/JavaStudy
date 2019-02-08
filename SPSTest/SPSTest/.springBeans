@@ -10,6 +10,7 @@
 		<config>src/main/resources/applicationCTX.xml</config>
 		<config>src/main/resources/studentCTX.xml</config>
 		<config>src/main/resources/pencilCTX.xml</config>
+		<config>src/main/resources/student2CTX.xml</config>
 	</configs>
 	<autoconfigs>
 	</autoconfigs>
